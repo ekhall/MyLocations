@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  CurrentLocationViewController.h
 //  MyLocations
 //
 //  Created by E. Kevin Hall on 12/9/12.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface CurrentLocationViewController : UIViewController
 
 @end

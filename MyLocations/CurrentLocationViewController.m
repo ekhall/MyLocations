@@ -1,18 +1,18 @@
 //
-//  FirstViewController.m
+//  CurrentLocationViewController.m
 //  MyLocations
 //
 //  Created by E. Kevin Hall on 12/9/12.
 //  Copyright (c) 2012 E. Kevin Hall. All rights reserved.
 //
 
-#import "FirstViewController.h"
+#import "CurrentLocationViewController.h"
 
-@interface FirstViewController ()
+@interface CurrentLocationViewController ()
 
 @end
 
-@implementation FirstViewController
+@implementation CurrentLocationViewController
 
 - (void)viewDidLoad
 {
