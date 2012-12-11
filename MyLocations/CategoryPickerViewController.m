@@ -13,8 +13,6 @@
     NSIndexPath *selectedIndexPath;
 }
 
-@synthesize delegate, selectedCategoryName;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

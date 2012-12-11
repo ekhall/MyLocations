@@ -23,6 +23,8 @@
 		7BAC9FA5157BDD37001D1EEF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAC9FA4157BDD37001D1EEF /* CoreLocation.framework */; };
 		7BAC9FAC157BE4C2001D1EEF /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC9FAB157BE4C2001D1EEF /* LocationDetailsViewController.m */; };
 		7BAC9FB0157BEAA3001D1EEF /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC9FAF157BEAA3001D1EEF /* CategoryPickerViewController.m */; };
+		AE75A5861677A0850038F663 /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE75A5851677A0850038F663 /* HudView.m */; };
+		AE75A5891677AD7A0038F663 /* Progress.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE75A5881677AD7A0038F663 /* Progress.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,9 @@
 		7BAC9FAB157BE4C2001D1EEF /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
 		7BAC9FAE157BEAA3001D1EEF /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
 		7BAC9FAF157BEAA3001D1EEF /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
+		AE75A5841677A0850038F663 /* HudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudView.h; sourceTree = "<group>"; };
+		AE75A5851677A0850038F663 /* HudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudView.m; sourceTree = "<group>"; };
+		AE75A5881677AD7A0038F663 /* Progress.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Progress.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +103,7 @@
 		7BAC9F7D157BD85D001D1EEF /* MyLocations */ = {
 			isa = PBXGroup;
 			children = (
+				AE75A5881677AD7A0038F663 /* Progress.txt */,
 				7BAC9F86157BD85D001D1EEF /* AppDelegate.h */,
 				7BAC9F87157BD85D001D1EEF /* AppDelegate.m */,
 				7BAC9F89157BD85D001D1EEF /* MainStoryboard.storyboard */,
@@ -105,6 +111,8 @@
 				7BAC9F8D157BD85D001D1EEF /* CurrentLocationViewController.m */,
 				7BAC9FAA157BE4C2001D1EEF /* LocationDetailsViewController.h */,
 				7BAC9FAB157BE4C2001D1EEF /* LocationDetailsViewController.m */,
+				AE75A5841677A0850038F663 /* HudView.h */,
+				AE75A5851677A0850038F663 /* HudView.m */,
 				7BAC9FAE157BEAA3001D1EEF /* CategoryPickerViewController.h */,
 				7BAC9FAF157BEAA3001D1EEF /* CategoryPickerViewController.m */,
 				7BAC9F8F157BD85D001D1EEF /* first.png */,
@@ -186,6 +194,7 @@
 				7BAC9F92157BD85D001D1EEF /* first@2x.png in Resources */,
 				7BAC9F97157BD85D001D1EEF /* second.png in Resources */,
 				7BAC9F99157BD85D001D1EEF /* second@2x.png in Resources */,
+				AE75A5891677AD7A0038F663 /* Progress.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +211,7 @@
 				7BAC9F95157BD85D001D1EEF /* SecondViewController.m in Sources */,
 				7BAC9FAC157BE4C2001D1EEF /* LocationDetailsViewController.m in Sources */,
 				7BAC9FB0157BEAA3001D1EEF /* CategoryPickerViewController.m in Sources */,
+				AE75A5861677A0850038F663 /* HudView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,20 +7,12 @@
 //
 
 #import "LocationDetailsViewController.h"
+#import "HudView.h"
 
 @implementation LocationDetailsViewController {
     NSString *descriptionText;
     NSString *categoryName;
 }
-
-@synthesize descriptionTextView;
-@synthesize categoryLabel;
-@synthesize latitudeLabel;
-@synthesize longitudeLabel;
-@synthesize addressLabel;
-@synthesize dateLabel;
-@synthesize coordinate;
-@synthesize placemark;
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -54,7 +46,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
- 
+    
     self.descriptionTextView.text = descriptionText;
     self.categoryLabel.text = categoryName;
 
@@ -68,6 +60,26 @@
     }
  
     self.dateLabel.text = [self formatDate:[NSDate date]];
+    
+    UITapGestureRecognizer *gestureRecognizer = [[UITapGestureRecognizer alloc]
+                                                 initWithTarget:self
+                                                 action:@selector(hideKeyboard:)];
+    gestureRecognizer.cancelsTouchesInView = NO;
+    [self.tableView addGestureRecognizer:gestureRecognizer];
+}
+
+- (void)hideKeyboard:(UIGestureRecognizer *)gestureRecognizer {
+    
+    // This is SO cool
+    CGPoint point = [gestureRecognizer locationInView:self.tableView];
+    
+    // So cool
+    NSIndexPath *indexPath = [self.tableView indexPathForRowAtPoint:point];
+    
+    if (indexPath != nil && indexPath.section == 0 && indexPath.row == 0) {
+        return;
+    }
+    [self.descriptionTextView resignFirstResponder];
 }
 
 - (void)closeScreen
@@ -77,9 +89,8 @@
 
 - (IBAction)done:(id)sender
 {
-    NSLog(@"Description '%@'", descriptionText);
- 
-    [self closeScreen];
+    HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
+    hudView.text = @"Tagged";
 }
 
 - (IBAction)cancel:(id)sender
@@ -104,8 +115,13 @@
         return 88;
     } else if (indexPath.section == 2 && indexPath.row == 2) {
  
-        CGRect rect = CGRectMake(100, 10, 190, 1000);
+        // Create super-sized rect to hold the address
+        CGRect rect = CGRectMake(10, 10, 190, 1000);
+        
+        // Set the frame of the addressLabel to this size.
         self.addressLabel.frame = rect;
+        
+        // Resize label to fit now that address is inside.
         [self.addressLabel sizeToFit];
  
         rect.size.height = self.addressLabel.frame.size.height;
@@ -114,6 +130,19 @@
         return self.addressLabel.frame.size.height + 20;
     } else {
         return 44;
+    }
+}
+
+- (NSIndexPath *)tableView:(UITableView *)tableView willSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ((indexPath.section == 0) || (indexPath.section == 1)) {
+        return indexPath;
+    } else
+        return nil;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if ((indexPath.section == 0) && (indexPath.row == 0)) {
+        [self.descriptionTextView becomeFirstResponder];
     }
 }
 

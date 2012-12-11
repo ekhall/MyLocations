@@ -27,14 +27,6 @@
     BOOL performingReverseGeocoding;
     NSError *lastGeocodingError;
 }
-
-@synthesize messageLabel;
-@synthesize latitudeLabel;
-@synthesize longitudeLabel;
-@synthesize addressLabel;
-@synthesize tagButton;
-@synthesize getButton;
-
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder]))
