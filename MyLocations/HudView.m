@@ -17,6 +17,7 @@
     [view addSubview:hudView];
     view.userInteractionEnabled = NO;
     
+    [hudView showAnimated:animated];
     return hudView;
 }
 
@@ -29,6 +30,7 @@
     return self;
 }
 
+#pragma mark - DrawRect
 - (void)drawRect:(CGRect)rect
 {
     const CGFloat boxWidth = 96.0f;
@@ -59,6 +61,23 @@
     [self.text drawAtPoint:textPoint
                   withFont:font];
     
+}
+
+#pragma mark - ShowAnimated
+- (void)showAnimated:(BOOL)animated {
+    if (animated) {
+        self.alpha = 0.0f;
+        self.transform = CGAffineTransformMakeScale(1.3f, 1.3f);
+        //self.transform = CGAffineTransformMakeRotation(2.0f);
+        
+        [UIView beginAnimations:nil context:NULL];
+        [UIView setAnimationDuration:0.3];
+        
+        self.alpha = 1.0f;
+        self.transform = CGAffineTransformIdentity;
+        
+        [UIView commitAnimations];
+    }
 }
 
 @end
