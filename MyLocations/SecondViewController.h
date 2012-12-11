@@ -2,8 +2,8 @@
 //  SecondViewController.h
 //  MyLocations
 //
-//  Created by E. Kevin Hall on 12/9/12.
-//  Copyright (c) 2012 E. Kevin Hall. All rights reserved.
+//  Created by Matthijs Hollemans on 03-06-12.
+//  Copyright (c) 2012 Hollance. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

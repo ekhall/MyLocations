@@ -2,8 +2,8 @@
 //  SecondViewController.m
 //  MyLocations
 //
-//  Created by E. Kevin Hall on 12/9/12.
-//  Copyright (c) 2012 E. Kevin Hall. All rights reserved.
+//  Created by Matthijs Hollemans on 03-06-12.
+//  Copyright (c) 2012 Hollance. All rights reserved.
 //
 
 #import "SecondViewController.h"
@@ -20,10 +20,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
 
 @end
