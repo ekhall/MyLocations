@@ -24,6 +24,7 @@
 		AE033D111674D7AF0076E456 /* second.png in Resources */ = {isa = PBXBuildFile; fileRef = AE033D101674D7AF0076E456 /* second.png */; };
 		AE033D131674D7AF0076E456 /* second@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AE033D121674D7AF0076E456 /* second@2x.png */; };
 		AE033D1E1674F5960076E456 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE033D1D1674F5960076E456 /* CoreLocation.framework */; };
+		AE033D211676BB390076E456 /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE033D201676BB390076E456 /* LocationDetailsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,8 @@
 		AE033D101674D7AF0076E456 /* second.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = second.png; sourceTree = "<group>"; };
 		AE033D121674D7AF0076E456 /* second@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "second@2x.png"; sourceTree = "<group>"; };
 		AE033D1D1674F5960076E456 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		AE033D1F1676BB390076E456 /* LocationDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationDetailsViewController.h; sourceTree = "<group>"; };
+		AE033D201676BB390076E456 /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 			children = (
 				AE033CFA1674D7AE0076E456 /* AppDelegate.h */,
 				AE033CFB1674D7AE0076E456 /* AppDelegate.m */,
+				AE033D1F1676BB390076E456 /* LocationDetailsViewController.h */,
+				AE033D201676BB390076E456 /* LocationDetailsViewController.m */,
 				AE033D031674D7AE0076E456 /* MainStoryboard.storyboard */,
 				AE033D061674D7AE0076E456 /* CurrentLocationViewController.h */,
 				AE033D071674D7AE0076E456 /* CurrentLocationViewController.m */,
@@ -202,6 +207,7 @@
 				AE033CFC1674D7AE0076E456 /* AppDelegate.m in Sources */,
 				AE033D081674D7AE0076E456 /* CurrentLocationViewController.m in Sources */,
 				AE033D0F1674D7AF0076E456 /* SecondViewController.m in Sources */,
+				AE033D211676BB390076E456 /* LocationDetailsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
