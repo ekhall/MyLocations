@@ -27,6 +27,7 @@
 		AE75A5891677AD7A0038F663 /* Progress.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE75A5881677AD7A0038F663 /* Progress.txt */; };
 		AEBF8FAD167E5969005AB502 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBF8FAC167E5969005AB502 /* CoreData.framework */; };
 		AEBF8FB1167E59A0005AB502 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AEBF8FAF167E59A0005AB502 /* DataModel.xcdatamodeld */; };
+		AEBF8FB5167E5BDE005AB502 /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = AEBF8FB4167E5BDE005AB502 /* Location.m */; };
 		AEC42BF9167E50330015FD20 /* Checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC42BF7167E50330015FD20 /* Checkmark.png */; };
 		AEC42BFA167E50330015FD20 /* Checkmark@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AEC42BF8167E50330015FD20 /* Checkmark@2x.png */; };
 /* End PBXBuildFile section */
@@ -61,6 +62,8 @@
 		AE75A5881677AD7A0038F663 /* Progress.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Progress.txt; sourceTree = "<group>"; };
 		AEBF8FAC167E5969005AB502 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		AEBF8FB0167E59A0005AB502 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
+		AEBF8FB3167E5BDE005AB502 /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		AEBF8FB4167E5BDE005AB502 /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		AEC42BF7167E50330015FD20 /* Checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checkmark.png; sourceTree = "<group>"; };
 		AEC42BF8167E50330015FD20 /* Checkmark@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Checkmark@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +131,8 @@
 				7BAC9F93157BD85D001D1EEF /* SecondViewController.h */,
 				7BAC9F94157BD85D001D1EEF /* SecondViewController.m */,
 				AEBF8FAF167E59A0005AB502 /* DataModel.xcdatamodeld */,
+				AEBF8FB3167E5BDE005AB502 /* Location.h */,
+				AEBF8FB4167E5BDE005AB502 /* Location.m */,
 				AEBF8FB2167E59BA005AB502 /* Misc Images */,
 				AEC42BF6167E50330015FD20 /* Hud Images */,
 				7BAC9F7E157BD85D001D1EEF /* Supporting Files */,
@@ -244,6 +249,7 @@
 				7BAC9FB0157BEAA3001D1EEF /* CategoryPickerViewController.m in Sources */,
 				AE75A5861677A0850038F663 /* HudView.m in Sources */,
 				AEBF8FB1167E59A0005AB502 /* DataModel.xcdatamodeld in Sources */,
+				AEBF8FB5167E5BDE005AB502 /* Location.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +295,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -307,7 +313,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
