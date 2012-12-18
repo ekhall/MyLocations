@@ -70,7 +70,11 @@
 #pragma mark - Boilerplate
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    UITabBarController *tabBarController            = (UITabBarController *) self.window.rootViewController;
+    UINavigationController *navigationController    = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
+    CurrentLocationViewController *currentLocationViewController = (CurrentLocationViewController *)
+        [[navigationController viewControllers] objectAtIndex:0];
+    currentLocationViewController.managedObjectContext = self.managedObjectContext;
     return YES;
 }
 							
