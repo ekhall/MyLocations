@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "CurrentLocationViewController.h"
+#import "LocationsViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, UIAlertViewDelegate>
 

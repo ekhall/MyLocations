@@ -85,10 +85,18 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     UITabBarController *tabBarController            = (UITabBarController *) self.window.rootViewController;
-    UINavigationController *navigationController    = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
+    
+    UINavigationController *navigationController_0  = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:0];
+    UINavigationController *navigationController_1  = (UINavigationController *)[[tabBarController viewControllers] objectAtIndex:1];
+    
     CurrentLocationViewController *currentLocationViewController = (CurrentLocationViewController *)
-        [[navigationController viewControllers] objectAtIndex:0];
+        [[navigationController_0 viewControllers] objectAtIndex:0];
     currentLocationViewController.managedObjectContext = self.managedObjectContext;
+    
+    LocationsViewController *locationsViewController =
+        (LocationsViewController *)[[navigationController_1 viewControllers] objectAtIndex:0];
+    locationsViewController.managedObjectContext = self.managedObjectContext;
+    
     return YES;
 }
 							

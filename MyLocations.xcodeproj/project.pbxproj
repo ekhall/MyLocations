@@ -23,6 +23,8 @@
 		7BAC9FA5157BDD37001D1EEF /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BAC9FA4157BDD37001D1EEF /* CoreLocation.framework */; };
 		7BAC9FAC157BE4C2001D1EEF /* LocationDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC9FAB157BE4C2001D1EEF /* LocationDetailsViewController.m */; };
 		7BAC9FB0157BEAA3001D1EEF /* CategoryPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BAC9FAF157BEAA3001D1EEF /* CategoryPickerViewController.m */; };
+		AE428EF8168B86E800B78C46 /* LocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE428EF7168B86E800B78C46 /* LocationsViewController.m */; };
+		AE428EFC168B94A700B78C46 /* LocationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AE428EFB168B94A700B78C46 /* LocationCell.m */; };
 		AE75A5861677A0850038F663 /* HudView.m in Sources */ = {isa = PBXBuildFile; fileRef = AE75A5851677A0850038F663 /* HudView.m */; };
 		AE75A5891677AD7A0038F663 /* Progress.txt in Resources */ = {isa = PBXBuildFile; fileRef = AE75A5881677AD7A0038F663 /* Progress.txt */; };
 		AEBF8FAD167E5969005AB502 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEBF8FAC167E5969005AB502 /* CoreData.framework */; };
@@ -57,6 +59,10 @@
 		7BAC9FAB157BE4C2001D1EEF /* LocationDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationDetailsViewController.m; sourceTree = "<group>"; };
 		7BAC9FAE157BEAA3001D1EEF /* CategoryPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryPickerViewController.h; sourceTree = "<group>"; };
 		7BAC9FAF157BEAA3001D1EEF /* CategoryPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryPickerViewController.m; sourceTree = "<group>"; };
+		AE428EF6168B86E800B78C46 /* LocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationsViewController.h; sourceTree = "<group>"; };
+		AE428EF7168B86E800B78C46 /* LocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationsViewController.m; sourceTree = "<group>"; };
+		AE428EFA168B94A700B78C46 /* LocationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationCell.h; sourceTree = "<group>"; };
+		AE428EFB168B94A700B78C46 /* LocationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationCell.m; sourceTree = "<group>"; };
 		AE75A5841677A0850038F663 /* HudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HudView.h; sourceTree = "<group>"; };
 		AE75A5851677A0850038F663 /* HudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HudView.m; sourceTree = "<group>"; };
 		AE75A5881677AD7A0038F663 /* Progress.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Progress.txt; sourceTree = "<group>"; };
@@ -119,7 +125,11 @@
 				AE75A5881677AD7A0038F663 /* Progress.txt */,
 				7BAC9F86157BD85D001D1EEF /* AppDelegate.h */,
 				7BAC9F87157BD85D001D1EEF /* AppDelegate.m */,
+				AE428EFA168B94A700B78C46 /* LocationCell.h */,
+				AE428EFB168B94A700B78C46 /* LocationCell.m */,
 				7BAC9F89157BD85D001D1EEF /* MainStoryboard.storyboard */,
+				AE428EF6168B86E800B78C46 /* LocationsViewController.h */,
+				AE428EF7168B86E800B78C46 /* LocationsViewController.m */,
 				7BAC9F8C157BD85D001D1EEF /* CurrentLocationViewController.h */,
 				7BAC9F8D157BD85D001D1EEF /* CurrentLocationViewController.m */,
 				7BAC9FAA157BE4C2001D1EEF /* LocationDetailsViewController.h */,
@@ -250,6 +260,8 @@
 				AE75A5861677A0850038F663 /* HudView.m in Sources */,
 				AEBF8FB1167E59A0005AB502 /* DataModel.xcdatamodeld in Sources */,
 				AEBF8FB5167E5BDE005AB502 /* Location.m in Sources */,
+				AE428EF8168B86E800B78C46 /* LocationsViewController.m in Sources */,
+				AE428EFC168B94A700B78C46 /* LocationCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
