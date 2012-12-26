@@ -16,6 +16,8 @@
     NSDate *date;
 }
 
+@synthesize locationToEdit;
+
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if ((self = [super initWithCoder:aDecoder])) {
@@ -50,6 +52,15 @@
 {
     [super viewDidLoad];
     
+    if (self.locationToEdit != nil) {
+        self.title = @"Edit Location";
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]
+                                                  initWithBarButtonSystemItem:UIBarButtonItemStyleDone
+                                                  target:self
+                                                  action:@selector(done:)];
+    }
+    
     self.descriptionTextView.text = descriptionText;
     self.categoryLabel.text = categoryName;
 
@@ -69,6 +80,20 @@
                                                  action:@selector(hideKeyboard:)];
     gestureRecognizer.cancelsTouchesInView = NO;
     [self.tableView addGestureRecognizer:gestureRecognizer];
+}
+
+// This method is called from the LocationsViewController setter code at the end of the segue code.
+- (void)setLocationToEdit:(Location *)newLocationToEdit {
+    if (locationToEdit != newLocationToEdit) {
+        locationToEdit = newLocationToEdit;
+        
+        descriptionText = locationToEdit.locationDescription;
+        categoryName = locationToEdit.category;
+        self.coordinate = CLLocationCoordinate2DMake([locationToEdit.latitude doubleValue],
+                                                     [locationToEdit.longitude doubleValue]);
+        self.placemark = locationToEdit.placemark;
+        date = locationToEdit.date;
+    }
 }
 
 - (void)hideKeyboard:(UIGestureRecognizer *)gestureRecognizer {
@@ -93,10 +118,16 @@
 - (IBAction)done:(id)sender
 {
     HudView *hudView = [HudView hudInView:self.navigationController.view animated:YES];
-    hudView.text = @"Tagged";
     
-    Location *location = [NSEntityDescription insertNewObjectForEntityForName:@"Location"
-                                                       inManagedObjectContext:self.managedObjectContext];
+    Location *location = nil;
+    if (self.locationToEdit != nil) {
+        hudView.text = @"Updated";
+        location = self.locationToEdit;
+    } else {
+        hudView.text = @"Tagged";
+        location = [NSEntityDescription insertNewObjectForEntityForName:@"Location"
+                                                           inManagedObjectContext:self.managedObjectContext];
+    }
     location.locationDescription = descriptionText;
     location.category = categoryName;
     location.latitude = [NSNumber numberWithDouble:self.coordinate.latitude];

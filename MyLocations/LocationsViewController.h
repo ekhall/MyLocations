@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Location.h"
 #import "LocationCell.h"
+#import "LocationDetailsViewController.h"
 
 @interface LocationsViewController : UITableViewController
 
