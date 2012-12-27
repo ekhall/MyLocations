@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "Location.h"
+#import "LocationDetailsViewController.h"
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) IBOutlet MKMapView *mapView;
 
-- (IBAction)showUser:(id)sender;
-- (IBAction)showLocations:(id)sender;
+- (IBAction)showUser;
+- (IBAction)showLocations;
 
 @end

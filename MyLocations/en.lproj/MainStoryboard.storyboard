@@ -402,7 +402,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8z4-GR-Ck8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1667" y="139"/>
+            <point key="canvasLocation" x="1736" y="374"/>
         </scene>
         <!--Category Picker View Controller - Choose Category-->
         <scene sceneID="6YO-Vz-MKS">
@@ -421,7 +421,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Qu-lX-fkU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2054" y="139"/>
+            <point key="canvasLocation" x="2184" y="402"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="15">
@@ -458,12 +458,12 @@
                                     <navigationItem title="Map" id="xCN-sf-Tff">
                                         <barButtonItem key="leftBarButtonItem" title="Locations" id="Agg-uV-wri">
                                             <connections>
-                                                <action selector="showLocations:" destination="0fU-vN-VrR" id="bRZ-Ku-hi7"/>
+                                                <action selector="showLocations" destination="0fU-vN-VrR" id="o4f-PP-Pwz"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="User" id="q8P-31-6XV">
                                             <connections>
-                                                <action selector="showUser:" destination="0fU-vN-VrR" id="vfv-20-ihm"/>
+                                                <action selector="showUser" destination="0fU-vN-VrR" id="Q8g-Qt-ebS"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -472,6 +472,9 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="hYm-tW-zko">
                                 <rect key="frame" x="0.0" y="44" width="320" height="367"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="0fU-vN-VrR" id="wHx-hp-tXO"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -479,6 +482,7 @@
                     <tabBarItem key="tabBarItem" title="Map" id="Pv6-Zq-hAb"/>
                     <connections>
                         <outlet property="mapView" destination="hYm-tW-zko" id="Xbh-Mb-PLg"/>
+                        <segue destination="0uW-5S-d5P" kind="modal" identifier="EditLocation" id="AU7-58-3og"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BOL-fo-7NZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -501,15 +505,63 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C81-Lo-SjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1284" y="139"/>
+            <point key="canvasLocation" x="1384" y="171"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CategoryPickerViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CategoryPickerViewController.h"/>
+        </class>
+        <class className="CurrentLocationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CurrentLocationViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="getLocation:"/>
+                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="getButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="messageLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tagButton" candidateClass="UIButton"/>
+            </relationships>
+        </class>
+        <class className="LocationCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="descriptionLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LocationDetailsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationDetailsViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancel:"/>
+                <relationship kind="action" name="done:"/>
+                <relationship kind="outlet" name="addressLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="categoryLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="dateLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="descriptionTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="latitudeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="longitudeLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="LocationsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LocationsViewController.h"/>
+        </class>
+        <class className="MapViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="showLocations"/>
+                <relationship kind="action" name="showUser"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MKMapView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="RLG-LH-9ir"/>
+        <segue reference="Jhu-K5-XbY"/>
     </inferredMetricsTieBreakers>
 </document>
